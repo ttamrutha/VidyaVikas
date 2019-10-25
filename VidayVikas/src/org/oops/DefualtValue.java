@@ -4,7 +4,7 @@ class DV
 	
 	public void print()
 	{
-		int v-;
+		int v;
 		String name;
 		System.out.println(v);
 		System.out.println(name);

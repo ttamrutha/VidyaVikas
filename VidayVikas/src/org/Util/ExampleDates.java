@@ -9,6 +9,8 @@ public static void main(String[] args) {
 	String da="02/10/2019";
 	Date d2=new Date(da);
 	 long diff = d1.getTime() - d2.getTime();
+	 System.out.println(diff);
+	 //int mod=10000%60;
      long diffSeconds = diff / 1000 % 60;
      long diffMinutes = diff / (60 * 1000) % 60;
      long diffHours = diff / (60 * 60 * 1000);
@@ -19,6 +21,7 @@ public static void main(String[] args) {
      System.out.println(calendar.get(Calendar.DAY_OF_MONTH));
      System.out.println(calendar.get(Calendar.DAY_OF_WEEK));
      System.out.println(calendar.get(Calendar.AM_PM));
+     System.out.println("Seconds="+diffSeconds);
      
 }
 }
