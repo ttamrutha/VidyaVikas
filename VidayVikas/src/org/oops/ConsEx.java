@@ -28,4 +28,5 @@ public static void main(String[] args) {
 	ChildCls obj2=new ChildCls(10);
 	ChildCls obj3=(ChildCls) new BaseCls(10);
 }
+
 }

@@ -15,6 +15,6 @@ public class ExampleConstructor {
 public static void main(String[] args) {
 	Demo obj;
 	obj=new Demo();
-	System.out.println(obj);
+	//System.out.println(obj);
 }
 }
