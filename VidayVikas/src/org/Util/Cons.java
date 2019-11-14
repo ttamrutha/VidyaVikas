@@ -14,5 +14,9 @@ public class Cons {
 public static void main(String[] args) {
 	//a obj=new a();
 	a obj1=new a(10);
+	String name="IP";
+	System.out.println(name);
+	name=name.replace("IP", "UP");
+	System.out.println(name);
 }
 }
