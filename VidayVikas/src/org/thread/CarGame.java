@@ -16,6 +16,13 @@ class Car implements Runnable
 		for(int i=1;i<=100;i++)
 		{
 			System.out.println("User Car\t"+i);
+			if(i==3)
+			{
+				
+					Problem();
+				
+			}
+			
 			try {
 				Thread.sleep(1000);
 			} catch (InterruptedException e) {
@@ -24,50 +31,24 @@ class Car implements Runnable
 			}
 		}
 	}
-	public void Problem() throws InterruptedException {
+	public void Problem()  {
 		System.out.println("Problem Occured...");
-		t.suspend();
+		try {
+			t.wait();
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
-	public void problemResolved() throws InterruptedException
+	public void problemResolved()  
 	{
 		System.out.println("Problem Resolved...");
-		t.resume();
+		t.notify();
 	}
 }
 public class CarGame {
 public static void main(String[] args) {
 	Car obj=new Car();
-	Random r=new Random();
-	
-	while(true)
-	{
-		int num=r.nextInt(10);
-		System.out.println("R:"+num);
-	if(num%2==0)
-	{
-		try {
-			obj.Problem();
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
-	}
-	else 
-	{
-		try {
-			obj.problemResolved();
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	}
-	try {
-		Thread.sleep(1000);
-	} catch (InterruptedException e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
-	}
-	}
+
 }
 }

@@ -8,6 +8,7 @@ class Print extends Thread
 		for(int i=0;i<500;i++)
 		{
 			Thread.yield();
+		
 			System.out.println("i1="+i);
 			
 		}
@@ -34,6 +35,14 @@ public static void main(String[] args) {
 	Print3 p3=new Print3();
 	p1.start();
 	p3.start();
+	try {
+		p1.join();
+		p3.join();
+	} catch (InterruptedException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+	
 	
 	
 }
