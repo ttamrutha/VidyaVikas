@@ -47,6 +47,7 @@ public static void main(String[] args) {
 	System.out.println("Enter a password");
 	String pwd=key.nextLine();
 	if(validateUser(userName, pwd))
+		
 	{
 		System.out.println("Sucessfully Login ");
 	}

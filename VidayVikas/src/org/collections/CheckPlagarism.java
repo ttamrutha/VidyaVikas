@@ -1,4 +1,4 @@
-package org.collections;
+ package org.collections;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -12,7 +12,7 @@ public class CheckPlagarism {
 		sList1=Arrays.asList(splitData);
 		return sList1;
 	}
-public static void main(String[] args) {
+public static void main(String[] args ) {
 	/*String s1="The project proposal should contain complete details in the following format";
 	String s2="The title itself gives a peep into the project to be taken up, candidate is";*/
 	String s1="1 6 3 4";
@@ -26,6 +26,6 @@ public static void main(String[] args) {
 	//removeList.removeAll(new ArrayList<>(retainList));
 	int per=retainList.size()*100/s1List.size();
 	System.out.println(s2List.toString());
-	System.out.println("Per:" +per+"%");
+	System.out.println("Pder:" +per+"%");
 }
 }
